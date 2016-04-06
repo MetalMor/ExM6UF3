@@ -1,0 +1,19 @@
+/* Atributos estáticos */
+ul.global {
+    list-style-type: disc;
+    font-family: 'Permanent Marker', cursive;
+}
+
+ul.main {
+    list-style-type: circle;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+ul.aux {
+    list-style-type: square;
+    font-family: 'Amatic SC', cursive;
+}
+
+ul.global>li {
+    margin: 2%;
+}
