@@ -1,13 +1,21 @@
 /**
  * Created by mor on 6/04/16.
+ * JQuery - Exercici 02
  */
 function DocumentReady() {
-    /*var handler = new DOMhandler();
+    var handler = new DOMhandler();
     var elements = new ElementSelectors();
-    handler.modElement(elements.mainLists, elementStyle(elements.mainLists));
-    handler.modElement(elements.links, elementStyle(elements.links));
-    handler.modElement(elements.links, {color:"forestgreen", font_weight:"bold"}, "Henry");
-    handler.modElement(elements.emailLinks, elementStyle(elements.emailLinks));
-    handler.modElement(elements.pdfLinks, elementStyle(elements.pdfLinks));*/
+
+    // Lista de elementos que van a ser modificados
+    var modifications =
+        [this.sonnetsTable,
+         this.tableHead,
+         this.tableOdd,
+         this.sonnetsSecondChild,
+         this.sonnetsThirdChild,
+         this.henryTd,
+         this.henryNeighbour];
+
+    handler.modElements(modifications);
 }
 $(document).ready(DocumentReady)

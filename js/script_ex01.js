@@ -1,16 +1,20 @@
 /**
  * Created by mor on 4/04/16.
- * Intento de buena práctica ^___^
+ * JQuery - Exercici 01
  */
-
 function DocumentReady() {
     var handler = new DOMhandler();
     var elements = new ElementSelectors();
-    handler.modElement(elements.mainLists);
-    handler.modElement(elements.links);
-    handler.modElement(elements.henryLi);
-    handler.modElement(elements.emailLinks);
-    handler.modElement(elements.pdfLinks);
-    handler.modElement(elements.auxList);
+
+    // Lista de elementos que van a ser modificados
+    var modifications =
+        [elements.mainLists,
+         elements.links,
+         elements.henryLi,
+         elements.emailLinks,
+         elements.pdfLinks,
+         elements.auxList];
+
+    handler.modElements(modifications);
 }
 $(document).ready(DocumentReady)
