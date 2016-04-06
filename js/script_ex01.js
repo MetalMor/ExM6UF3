@@ -1,11 +1,7 @@
 /**
  * Created by mor on 4/04/16.
+ * Intento de buena práctica ^___^
  */
-/*window.DOMhandler = {
-    modElement: function(selector, attr, value) {
-        $(selector).css(attr, value);
-    }
-};*/
 
 function DocumentReady() {
     var handler = new DOMhandler();
