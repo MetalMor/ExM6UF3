@@ -11,11 +11,13 @@
  *      - Lógica para añadir eventos de forma dinámica guay, como hasta ahora C:
  */
 function DOMhandler() {
+    // Objeto de funciones de utilidad
+    this.utils = new Util();
     // Objeto del que se obtienen los estilos
     this.elementStyles = new ElementStyles();
 
     // Modifica el estilo de un elemento de forma predeterminada (a partir del objeto definido en la clase ElementStyles)
-    this.modElement = function(selector) {
+    this.modElement = function(selector, effect, time, callback) {
         if(!this.isNullOrUndefined(selector)) {
             var newStyle = this.elementStyles.style(selector)
             for (var attr in newStyle)  {
@@ -40,8 +42,13 @@ function DOMhandler() {
     this.applyEffect = function(selector, effect, time, callback) {
         $(selector)[effect](time, callback);
     };
-    this.areNullOrUndefined = this.elementStyles.areNullOrUndefined;
-    this.isNullOrUndefined = this.elementStyles.isNullOrUndefined;
+    this.styleMode = function(effect, time, callback) {
+        return this.areNullOrUndefined([effect, time, callback]);
+    };
+
+    this.areNullOrUndefined = this.utils.areNullOrUndefined;
+    this.isNullOrUndefined = this.utils.isNullOrUndefined;
+
     // Cambia el guion bajo por un guion normal (los atributos de CSS usan guiones, sin embargo, una propiedad de javascript no puede usarlos)
     this.clean = function(str){
         return str.replace("_", "-");

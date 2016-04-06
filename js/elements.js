@@ -47,6 +47,8 @@ function ElementSelectors() {
  */
 function ElementStyles(element) {
 
+    // Objeto de funciones de utilidad
+    this.utils = new Util();
     // Conjunto de selectores
     this.selectors = new ElementSelectors();
 
@@ -83,14 +85,7 @@ function ElementStyles(element) {
         }
     };
 
-    this.areNullOrUndefined = function(arrayOrObject) {
-        for (x in arrayOrObject)
-            if (this.isNullOrUndefined(arrayOrObject[x]))
-                return false;
-        return true;
-    };
-    this.isNullOrUndefined = function(smth) {
-        return smth === undefined || smth === null;
-    };
+    this.isNullOrUndefined = this.utils.isNullOrUndefined;
+    this.areNullOrUndefined = this.utils.areNullOrUndefined;
 
 };

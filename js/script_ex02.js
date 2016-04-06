@@ -8,13 +8,13 @@ function DocumentReady() {
 
     // Lista de elementos que van a ser modificados
     var modifications =
-        [this.sonnetsTable,
-         this.tableHead,
-         this.tableOdd,
-         this.sonnetsSecondChild,
-         this.sonnetsThirdChild,
-         this.henryTd,
-         this.henryNeighbour];
+        [elements.sonnetsTable,
+            elements.tableHead,
+            elements.tableOdd,
+            elements.sonnetsSecondChild,
+            elements.sonnetsThirdChild,
+            elements.henryTd,
+            elements.henryNeighbour];
 
     handler.modElements(modifications);
 }
